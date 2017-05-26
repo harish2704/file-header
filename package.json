@@ -1,6 +1,6 @@
 {
   "name": "file-header",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A CLI tool for generating file header from a configuration file and an EJS template.",
   "main": "index.js",
   "scripts": {

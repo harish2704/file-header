@@ -22,10 +22,13 @@ function initialize(){
 
 
 function getTemplate( fname ){
-  var ext = path.extname(fname).slice(1) || 'default';
+  var match = fname.match(/\.(.*)/);
+  var ext = match ? match[1] : fname;
 
   if( fs.existsSync( path.join(configDir, ext ) ) ){
     return fs.readFileSync( path.join(configDir, ext ), 'utf-8' );
+  } else if( ext.indexOf('.') !== -1 ){
+    return getTemplate( ext );
   } else {
     return fs.readFileSync( path.join(configDir, 'default' ), 'utf-8' );
   }

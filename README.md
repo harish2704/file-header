@@ -38,7 +38,8 @@ It is just [EJS](ejs) template. We can customize it to any extend.
 
 If we require different template for each file type , create a file  `~/.file-headers/<extention>`
 
-For javscript, create a custom template at  `~/.file-headers/js` and customize it.
+* For javscript, create a custom template at  `~/.file-headers/js` and customize it.
+* If we want a custom header for '*.spec.js' file, create ~/.file-headers/spec.js and customize it
 
 
 ## Usage
